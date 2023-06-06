@@ -29,8 +29,70 @@ namespace Triangle_TestClasses
         }
 
     }
+    [TestFixture]
+    public class Test_For_ISOSCELES
+    {
+        [Test]
+        public void ValideTringle_InputTest_1_ForIsosceles()
+        {
+            //Arragne
+            int firstAngle = 50;
+            int secondAngle = 50;
+            int thirdAngle = 80;
 
-   
+
+            string expected = "An ISOSCELES triangle is formed";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [Test]
+        public void ValideTringle_InputTest_2_ForIsosceles()
+        {
+            //Arragne
+            int firstAngle = 70;
+            int secondAngle = 55;
+            int thirdAngle = 55;
+
+
+            string expected = "An ISOSCELES triangle is formed";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [Test]
+        public void ValideTringle_InputTest_3_ForIsosceles()
+        {
+            //Arragne
+            int firstAngle = 56;
+            int secondAngle = 68;
+            int thirdAngle = 56;
+
+
+            string expected = "An ISOSCELES triangle is formed";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+    }
+
+
+
 
 }
 
