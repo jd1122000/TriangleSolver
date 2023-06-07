@@ -7,7 +7,7 @@ using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 namespace Triangle_TestClasses
 {
     [TestFixture]
-    public class Tests_For_EQUILATERAL
+    public class TestsForEQUILATERAL
     {
         [Test]
         public void ValideTringle_InputTestForEquilateral()
@@ -29,8 +29,10 @@ namespace Triangle_TestClasses
         }
 
     }
+
+
     [TestFixture]
-    public class Test_For_ISOSCELES
+    public class TestForISOSCELES
     {
         [Test]
         public void ValideTringle_InputTest_1_ForIsosceles()
@@ -89,6 +91,49 @@ namespace Triangle_TestClasses
 
         }
 
+    }
+
+    [TestFixture]
+    public class TestsForSCALANE
+    {
+        [Test]
+        public void ValideTringle_InputTest1_ForScalane()
+        {
+            //Arragne
+            int firstAngle = 70;
+            int secondAngle = 60;
+            int thirdAngle = 50;
+
+
+            string expected = "A SCALENE triangle is formed";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
+        [Test]
+        public void ValideTringle_InputTest2_ForScalane()
+        {
+            //Arragne
+            int firstAngle = 60;
+            int secondAngle = 65;
+            int thirdAngle = 55;
+
+
+            string expected = "A SCALENE triangle is formed";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
     }
 
 
