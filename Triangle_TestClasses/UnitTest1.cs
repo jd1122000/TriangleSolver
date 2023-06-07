@@ -134,11 +134,133 @@ namespace Triangle_TestClasses
 
 
         }
+        [Test]
+        public void ValideTringle_InputTest3_ForScalane()
+        {
+            //Arragne
+            int firstAngle = 75;
+            int secondAngle = 45;
+            int thirdAngle = 60;
+
+
+            string expected = "A SCALENE triangle is formed";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
+        [Test]
+        public void ValideTringle_InputTest4_ForScalane()
+        {
+            //Arragne
+            int firstAngle = 80;
+            int secondAngle = 40;
+            int thirdAngle = 60;
+
+
+            string expected = "A SCALENE triangle is formed";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
+        [Test]
+        public void ValideTringle_InputTest5_ForScalane()
+        {
+            //Arragne
+            int firstAngle = 40;
+            int secondAngle = 55;
+            int thirdAngle = 85;
+
+
+            string expected = "A SCALENE triangle is formed";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
     }
 
 
+    [TestFixture]
+    public class TestsForZeroLength
+    {
+        [Test]
+        public void ValideTringle_InputTest1_ForZeroLength()
+        {
 
 
+            //Arragne
+            int firstAngle = 40;
+            int secondAngle = 0;
+            int thirdAngle = 90;
+
+
+            string expected = "Invalid Triangle - at least one side is zero";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
+        [Test]
+        public void ValideTringle_InputTest2_ForZeroLength()
+        {
+
+
+            //Arragne
+            int firstAngle = 0;
+            int secondAngle = 180;
+            int thirdAngle = 0;
+
+
+            string expected = "Invalid Triangle - at least one side is zero";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
+        [Test]
+        public void ValideTringle_InputTest3_ForZeroLength()
+        {
+
+            //Arragne
+            int firstAngle = 100;
+            int secondAngle = 80;
+            int thirdAngle = 0;
+
+
+            string expected = "Invalid Triangle - at least one side is zero";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+
+        }
+    }
 }
 
 
