@@ -7,7 +7,7 @@ using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 namespace Triangle_TestClasses
 {
     [TestFixture]
-    public class TestsForEQUILATERAL
+    public class TestsForEquilateral
     {
         [Test]
         public void ValideTringle_InputTestForEquilateral()
@@ -32,7 +32,7 @@ namespace Triangle_TestClasses
 
 
     [TestFixture]
-    public class TestForISOSCELES
+    public class TestForIsosceles
     {
         [Test]
         public void ValideTringle_InputTest_1_ForIsosceles()
@@ -94,7 +94,7 @@ namespace Triangle_TestClasses
     }
 
     [TestFixture]
-    public class TestsForSCALANE
+    public class TestsForScalane
     {
         [Test]
         public void ValideTringle_InputTest1_ForScalane()
@@ -261,6 +261,67 @@ namespace Triangle_TestClasses
 
         }
     }
+
+    [TestFixture]
+    public class TestsForInvalidResponse
+    {
+        [Test]
+        public void ValideTringle_InputTest1_ForInvalidResponse()
+        {
+            //Arragne
+            int firstAngle = 20;
+            int secondAngle = 60;
+            int thirdAngle = 10;
+
+
+            string expected = "INVALID Triangle detected!!";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [Test]
+        public void ValideTringle_InputTest2_ForInvalidResponse()
+        {
+            //Arragne
+            int firstAngle = 30;
+            int secondAngle = 50;
+            int thirdAngle = 10;
+
+
+            string expected = "INVALID Triangle detected!!";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [Test]
+        public void ValideTringle_InputTest3_ForInvalidResponse()
+        {
+            //Arragne
+            int firstAngle = 150;
+            int secondAngle = 5;
+            int thirdAngle = 10;
+
+
+            string expected = "INVALID Triangle detected!!";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+    }
 }
+
 
 
